@@ -1,0 +1,14 @@
+[Unit]
+Description=Service de récupération et envoi des présences ZKTeco
+After=network.target
+
+[Service]
+ExecStart=/home/frederick/projets/myenv/bin/python3 /home/frederick/projets/driver-zkteco-service/zkteco_service.py
+Restart=always
+User=root
+WorkingDirectory=/home/frederick/projets/driver-zkteco-service
+StandardOutput=append:/home/frederick/projets/driver-zkteco-service/zkteco_attendance.log
+StandardError=append:/home/frederick/projets/driver-zkteco-service/zkteco_attendance_error.log
+
+[Install]
+WantedBy=multi-user.target
