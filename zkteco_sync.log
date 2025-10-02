@@ -10909,3 +10909,52 @@
 2025-06-18 15:16:57,934 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
 2025-06-18 15:16:57,934 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
 2025-06-18 15:16:57,934 - ERROR - Nombre maximum de tentatives atteint
+2025-10-02 10:56:17,164 - INFO - Démarrage du service de synchronisation ZKTeco
+2025-10-02 10:57:37,094 - INFO - Arrêt du service demandé
+2025-10-02 10:57:37,094 - INFO - Arrêt du service
+2025-10-02 10:59:41,843 - INFO - Démarrage du service de synchronisation ZKTeco
+2025-10-02 11:03:48,555 - INFO - Démarrage du service de synchronisation ZKTeco
+2025-10-02 11:04:32,095 - INFO - Arrêt du service demandé
+2025-10-02 11:04:32,095 - INFO - Arrêt du service
+2025-10-02 11:04:33,981 - INFO - Démarrage du service de synchronisation ZKTeco
+2025-10-02 11:04:33,981 - INFO - Scheduler configuré
+2025-10-02 11:04:33,982 - INFO - Service en cours d'exécution
+2025-10-02 11:08:09,544 - INFO - Arrêt du service demandé
+2025-10-02 11:08:09,544 - INFO - Arrêt du service
+2025-10-02 11:08:11,118 - INFO - Démarrage du service de synchronisation ZKTeco
+2025-10-02 11:08:11,118 - INFO - Scheduler configuré
+2025-10-02 11:08:11,119 - INFO - Service en cours d'exécution
+2025-10-02 11:11:57,139 - INFO - Arrêt du service demandé
+2025-10-02 11:11:57,143 - INFO - Arrêt du service
+2025-10-02 11:15:39,758 - INFO - Connecté avec succès à l'appareil 192.168.1.100
+2025-10-02 11:15:39,773 - WARNING - Erreur lors du chargement de la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-02 11:15:39,859 - INFO - 1 nouvelles présences trouvées
+2025-10-02 11:15:41,349 - INFO - Déconnexion réussie de l'appareil
+2025-10-02 12:01:21,783 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-02 12:06:21,980 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-02 12:06:21,980 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-02 12:06:22,099 - INFO - Nouvelles présences détectées: 1
+2025-10-02 12:06:22,101 - WARNING - Retry API 1/3 après 5s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:06:27,102 - WARNING - Retry API 2/3 après 10s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:06:37,102 - WARNING - Retry API 3/3 après 20s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:06:59,302 - INFO - Déconnexion réussie
+2025-10-02 12:06:59,302 - ERROR - Tentative 1/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-02 12:07:04,354 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-02 12:07:04,354 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-02 12:07:04,490 - INFO - Nouvelles présences détectées: 1
+2025-10-02 12:07:04,490 - WARNING - Retry API 1/3 après 5s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:07:09,491 - WARNING - Retry API 2/3 après 10s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:07:21,483 - WARNING - Retry API 3/3 après 20s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:07:41,520 - INFO - Déconnexion réussie
+2025-10-02 12:07:41,521 - ERROR - Tentative 2/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-02 12:07:46,569 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-02 12:07:46,569 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-02 12:07:46,697 - INFO - Nouvelles présences détectées: 1
+2025-10-02 12:07:46,698 - WARNING - Retry API 1/3 après 5s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:07:53,237 - WARNING - Retry API 2/3 après 10s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:08:03,238 - WARNING - Retry API 3/3 après 20s: Invalid URL 'ENDPOINT': No scheme supplied. Perhaps you meant https://ENDPOINT?
+2025-10-02 12:08:23,268 - INFO - Déconnexion réussie
+2025-10-02 12:08:23,268 - ERROR - Tentative 3/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-02 12:08:23,269 - CRITICAL - Échec complet de la synchronisation
+2025-10-02 12:10:01,566 - INFO - Arrêt du service demandé
+2025-10-02 12:10:01,566 - INFO - Service arrêté proprement
