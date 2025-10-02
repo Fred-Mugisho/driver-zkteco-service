@@ -193,15 +193,18 @@ def run_scheduler() -> None:
 if __name__ == '__main__':
     logging.info("Démarrage du service ZKTeco avec retry exponentiel et alertes")
     schedule.every(CONFIG['SYNC_INTERVAL']).minutes.do(fetch_and_send_attendance)
+    
+    # Bloquant, systemd garde le service actif
+    run_scheduler()
 
-    thread = threading.Thread(target=run_scheduler, daemon=True)
-    thread.start()
+    # thread = threading.Thread(target=run_scheduler, daemon=True)
+    # thread.start()
 
-    try:
-        thread.join()
-    except KeyboardInterrupt:
-        logging.info("Arrêt du service demandé")
-    except Exception as e:
-        logging.error(f"Erreur inattendue: {e}")
-    finally:
-        logging.info("Service arrêté proprement")
+    # try:
+    #     thread.join()
+    # except KeyboardInterrupt:
+    #     logging.info("Arrêt du service demandé")
+    # except Exception as e:
+    #     logging.error(f"Erreur inattendue: {e}")
+    # finally:
+    #     logging.info("Service arrêté proprement")
