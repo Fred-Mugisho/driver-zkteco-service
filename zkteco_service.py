@@ -24,14 +24,14 @@ logging.basicConfig(
 # Configuration
 # ----------------------
 CONFIG = {
-    'API_URL': 'ENDPOINT',
+    'API_URL': 'BACKEND_URL',
     'DEVICE_IP': '192.168.1.100',
     'DEVICE_PORT': 4370,
     'TIMEOUT': 60,
     'SYNC_INTERVAL': 5,          # en minutes
     'SYNC_FILE': 'sync_state.json',
     'MAX_RETRIES': 3,            # retry pour ZK + API
-    'RETRY_DELAY': 5,            # secondes entre retries simples
+    'RETRY_DELAY': 10,            # secondes entre retries simples
     'MAX_CONSECUTIVE_FAILURES': 3  # alert si échecs consécutifs
 }
 
@@ -121,6 +121,8 @@ class ZKAttendanceAgent:
 # ----------------------
 def fetch_and_send_attendance() -> None:
     global consecutive_failures
+    
+    logging.info("Démarrage de la synchronisation")
 
     if not sync_lock.acquire(blocking=False):
         logging.info("Une synchronisation est déjà en cours, skipping...")
@@ -192,10 +194,11 @@ def run_scheduler() -> None:
 # ----------------------
 if __name__ == '__main__':
     logging.info("Démarrage du service ZKTeco avec retry exponentiel et alertes")
-    schedule.every(CONFIG['SYNC_INTERVAL']).minutes.do(fetch_and_send_attendance)
+    # schedule.every(CONFIG['SYNC_INTERVAL']).minutes.do(fetch_and_send_attendance)
+    fetch_and_send_attendance()
     
     # Bloquant, systemd garde le service actif
-    run_scheduler()
+    # run_scheduler()
 
     # thread = threading.Thread(target=run_scheduler, daemon=True)
     # thread.start()

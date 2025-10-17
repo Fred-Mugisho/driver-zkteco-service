@@ -10958,3 +10958,163 @@
 2025-10-02 12:08:23,269 - CRITICAL - Échec complet de la synchronisation
 2025-10-02 12:10:01,566 - INFO - Arrêt du service demandé
 2025-10-02 12:10:01,566 - INFO - Service arrêté proprement
+2025-10-17 09:41:31,058 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 09:52:32,918 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 09:53:52,064 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 09:53:52,064 - INFO - Démarrage de la synchronisation
+2025-10-17 09:53:52,113 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 09:53:52,114 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 09:53:52,427 - INFO - Nouvelles présences détectées: 297
+2025-10-17 09:53:52,429 - WARNING - Retry API 1/3 après 5s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:53:57,430 - WARNING - Retry API 2/3 après 10s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:54:07,431 - WARNING - Retry API 3/3 après 20s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:54:27,493 - INFO - Déconnexion réussie
+2025-10-17 09:54:27,493 - ERROR - Tentative 1/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-17 09:54:32,541 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 09:54:32,541 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 09:54:32,854 - INFO - Nouvelles présences détectées: 297
+2025-10-17 09:54:32,855 - WARNING - Retry API 1/3 après 5s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:54:37,856 - WARNING - Retry API 2/3 après 10s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:54:47,858 - WARNING - Retry API 3/3 après 20s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:55:07,922 - INFO - Déconnexion réussie
+2025-10-17 09:55:07,923 - ERROR - Tentative 2/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-17 09:55:12,979 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 09:55:12,980 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 09:55:13,282 - INFO - Nouvelles présences détectées: 297
+2025-10-17 09:55:13,284 - WARNING - Retry API 1/3 après 5s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:55:18,285 - WARNING - Retry API 2/3 après 10s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:55:31,032 - WARNING - Retry API 3/3 après 20s: No connection adapters were found for '127.0.0.1:8000/api/ressource_humaine/presences/receive_attendance/'
+2025-10-17 09:55:51,078 - INFO - Déconnexion réussie
+2025-10-17 09:55:51,080 - ERROR - Tentative 3/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-17 09:55:51,080 - CRITICAL - Échec complet de la synchronisation
+2025-10-17 09:56:36,645 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 09:56:36,646 - INFO - Démarrage de la synchronisation
+2025-10-17 09:56:36,708 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 09:56:36,709 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 09:56:36,948 - INFO - Nouvelles présences détectées: 297
+2025-10-17 09:56:37,092 - INFO - Synchronisation réussie: 297 présences envoyées
+2025-10-17 09:56:37,124 - INFO - Déconnexion réussie
+2025-10-17 09:59:11,680 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 09:59:11,681 - INFO - Démarrage de la synchronisation
+2025-10-17 09:59:11,747 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 09:59:11,747 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 09:59:11,966 - INFO - Nouvelles présences détectées: 297
+2025-10-17 09:59:12,239 - INFO - Synchronisation réussie: 297 présences envoyées
+2025-10-17 09:59:12,271 - INFO - Déconnexion réussie
+2025-10-17 10:04:45,229 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:04:45,230 - INFO - Démarrage de la synchronisation
+2025-10-17 10:04:46,509 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:04:46,509 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:04:54,520 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:04:54,520 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:05:02,509 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:05:02,509 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:05:02,509 - CRITICAL - Échec complet de la synchronisation
+2025-10-17 10:05:47,538 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:05:47,538 - INFO - Démarrage de la synchronisation
+2025-10-17 10:05:47,597 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:05:47,597 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:05:47,885 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:05:47,888 - WARNING - Retry API 1/3 après 10s: Invalid URL 'https//backend.totalklean.com/api/ressource_humaine/presences/receive_attendance/': No scheme supplied. Perhaps you meant https://https//backend.totalklean.com/api/ressource_humaine/presences/receive_attendance/?
+2025-10-17 10:05:57,889 - WARNING - Retry API 2/3 après 20s: Invalid URL 'https//backend.totalklean.com/api/ressource_humaine/presences/receive_attendance/': No scheme supplied. Perhaps you meant https://https//backend.totalklean.com/api/ressource_humaine/presences/receive_attendance/?
+2025-10-17 10:06:04,675 - INFO - Déconnexion réussie
+2025-10-17 10:08:03,736 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:08:03,736 - INFO - Démarrage de la synchronisation
+2025-10-17 10:08:03,804 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:08:03,804 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:08:04,037 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:08:05,039 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:08:05,040 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:08:15,959 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:08:15,959 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:08:32,453 - INFO - Déconnexion réussie
+2025-10-17 10:08:59,785 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:08:59,786 - INFO - Démarrage de la synchronisation
+2025-10-17 10:08:59,853 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:08:59,853 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:09:00,168 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:09:01,311 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:09:01,311 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:09:12,201 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:09:12,201 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:09:35,425 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:09:35,425 - WARNING - Retry API 3/3 après 40s: Erreur API (500)
+2025-10-17 10:09:41,169 - INFO - Déconnexion réussie
+2025-10-17 10:30:21,488 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:30:21,488 - INFO - Démarrage de la synchronisation
+2025-10-17 10:30:21,534 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:30:21,534 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:30:21,856 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:30:22,594 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:30:22,594 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:30:33,368 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:30:33,368 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:30:48,459 - INFO - Déconnexion réussie
+2025-10-17 10:38:09,160 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:38:09,160 - INFO - Démarrage de la synchronisation
+2025-10-17 10:38:09,213 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:38:09,214 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:38:09,512 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:38:10,299 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:38:10,299 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:38:18,692 - INFO - Déconnexion réussie
+2025-10-17 10:38:24,856 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:38:24,857 - INFO - Démarrage de la synchronisation
+2025-10-17 10:38:24,897 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:38:24,897 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:38:25,204 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:38:25,929 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:38:25,929 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:38:36,903 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:38:36,903 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:38:57,676 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:38:57,676 - WARNING - Retry API 3/3 après 40s: Erreur API (500)
+2025-10-17 10:39:37,713 - INFO - Déconnexion réussie
+2025-10-17 10:39:37,713 - ERROR - Tentative 1/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-17 10:39:47,781 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:39:47,782 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:39:47,999 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:39:50,258 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:39:50,258 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:40:01,229 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:40:01,229 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:40:21,914 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:40:21,915 - WARNING - Retry API 3/3 après 40s: Erreur API (500)
+2025-10-17 10:41:01,949 - INFO - Déconnexion réussie
+2025-10-17 10:41:01,949 - ERROR - Tentative 2/3 échouée: Échec de l'envoi vers l'API après retries
+2025-10-17 10:41:12,004 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:41:12,004 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:41:12,228 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:41:13,071 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:41:13,071 - WARNING - Retry API 1/3 après 10s: Erreur API (500)
+2025-10-17 10:41:23,837 - WARNING - Erreur API (status 500): {"message":"Error --> Unsupported lookup 'date' for TimeField or join on the field not permitted.","response":"Erreur serveur. Contacter l'IT"}
+2025-10-17 10:41:23,837 - WARNING - Retry API 2/3 après 20s: Erreur API (500)
+2025-10-17 10:41:41,988 - INFO - Déconnexion réussie
+2025-10-17 10:41:44,886 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:41:44,886 - INFO - Démarrage de la synchronisation
+2025-10-17 10:41:44,942 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:41:44,943 - WARNING - Impossible de charger la dernière synchronisation: Expecting value: line 1 column 1 (char 0)
+2025-10-17 10:41:45,175 - INFO - Nouvelles présences détectées: 297
+2025-10-17 10:41:48,361 - INFO - Synchronisation réussie: 297 présences envoyées
+2025-10-17 10:41:48,404 - INFO - Déconnexion réussie
+2025-10-17 10:47:42,109 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:47:42,109 - INFO - Démarrage de la synchronisation
+2025-10-17 10:47:47,115 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:47:47,115 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:47:57,129 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:47:57,129 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:48:10,004 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2025-10-17 10:48:10,004 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
+2025-10-17 10:48:10,005 - CRITICAL - Échec complet de la synchronisation
+2025-10-17 10:49:37,281 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 10:49:37,281 - INFO - Démarrage de la synchronisation
+2025-10-17 10:49:37,680 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 10:49:37,902 - INFO - Nouvelles présences détectées: 1
+2025-10-17 10:49:39,402 - INFO - Synchronisation réussie: 1 présences envoyées
+2025-10-17 10:49:39,439 - INFO - Déconnexion réussie
+2025-10-17 11:00:45,463 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2025-10-17 11:00:45,463 - INFO - Démarrage de la synchronisation
+2025-10-17 11:00:45,517 - INFO - Connecté à l'appareil 192.168.1.100
+2025-10-17 11:00:45,814 - INFO - Nouvelles présences détectées: 1
+2025-10-17 11:00:46,550 - INFO - Synchronisation réussie: 1 présences envoyées
+2025-10-17 11:00:46,579 - INFO - Déconnexion réussie
