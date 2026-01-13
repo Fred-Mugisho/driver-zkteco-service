@@ -270,7 +270,7 @@ python3 zkteco_service.py
 # Vérifier si systemd est actif
 systemctl --version
 
-# Si actif, utiliser manage.sh
+# Si actif, utiliser manage.sh 
 chmod +x manage.sh
 sudo ./manage.sh install
 sudo ./manage.sh start
