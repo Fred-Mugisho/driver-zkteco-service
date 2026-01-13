@@ -11616,3 +11616,12 @@
 2026-01-13 10:56:25 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
 2026-01-13 10:56:25 - ERROR - Tentative 1/3: Non connecté
 2026-01-13 10:56:29 - INFO - Signal 2 - Arrêt...
+2026-01-13 12:18:35 - INFO - === Service ZKTeco ===
+2026-01-13 12:18:35 - INFO - OS: Darwin
+2026-01-13 12:18:35 - INFO - Appareil: 192.168.1.201:4370
+2026-01-13 12:18:35 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-13 12:18:35 - INFO - Intervalle: 5 min
+2026-01-13 12:18:35 - INFO - === Début sync ===
+2026-01-13 12:18:36 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-13 12:18:36 - ERROR - Tentative 1/3: Non connecté
+2026-01-13 12:18:40 - INFO - Signal 2 - Arrêt...

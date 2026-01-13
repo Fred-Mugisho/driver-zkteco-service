@@ -6,7 +6,7 @@ Guide optimisé pour machines Windows avec peu de ressources (4 Go RAM, HDD, 2 c
 
 ---
 
-## Résumé Rapide (Copier-Coller)
+## Resume Rapide (Copier-Coller)
 
 ```powershell
 # 1. Installer Python (PowerShell Admin)
@@ -18,22 +18,24 @@ mkdir C:\zkteco-service
 cd C:\zkteco-service
 # Copier les fichiers du projet ici
 
-# 3. Installer dépendances
+# 3. Creer venv et installer dependances
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
 # 4. Configurer
 copy .env.example .env
 notepad .env
 
-# 5. Créer tâche planifiée
-$py = (Get-Command python).Source
+# 5. Creer tache planifiee (avec venv)
+$py = "C:\zkteco-service\venv\Scripts\python.exe"
 $action = New-ScheduledTaskAction -Execute $py -Argument "zkteco_service.py" -WorkingDirectory "C:\zkteco-service"
 $trigger = New-ScheduledTaskTrigger -AtStartup
-$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 1)
-Register-ScheduledTask -TaskName "ZKTeco_Service" -Action $action -Trigger $trigger -Settings $settings -RunLevel Highest -User "SYSTEM"
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 1) -ExecutionTimeLimit (New-TimeSpan -Hours 0)
+Register-ScheduledTask -TaskName "ZKTeco_Sync_Service" -Action $action -Trigger $trigger -Settings $settings -RunLevel Highest -User "SYSTEM"
 
-# 6. Démarrer
-Start-ScheduledTask -TaskName "ZKTeco_Service"
+# 6. Demarrer
+Start-ScheduledTask -TaskName "ZKTeco_Sync_Service"
 ```
 
 ---
@@ -78,12 +80,12 @@ pip 23.x.x
 
 ---
 
-## Étape 2 : Installer le service ZKTeco
+## Etape 2 : Installer le service ZKTeco
 
-### 2.1 Créer le dossier
+### 2.1 Creer le dossier
 
 ```powershell
-# Créer le dossier
+# Creer le dossier
 New-Item -ItemType Directory -Path "C:\zkteco-service" -Force
 
 # Aller dans le dossier
@@ -93,11 +95,11 @@ cd C:\zkteco-service
 ### 2.2 Copier les fichiers
 
 Copier tous les fichiers du projet dans `C:\zkteco-service\` :
-- Via clé USB
-- Via réseau partagé
-- Via téléchargement
+- Via cle USB
+- Via reseau partage
+- Via telechargement
 
-**Fichiers nécessaires :**
+**Fichiers necessaires :**
 ```
 C:\zkteco-service\
 ├── zkteco_service.py
@@ -108,7 +110,24 @@ C:\zkteco-service\
 └── pyzk_lib\
 ```
 
-### 2.3 Installer les dépendances Python
+### 2.3 Creer un environnement virtuel (Recommande)
+
+```powershell
+cd C:\zkteco-service
+
+# Creer le venv
+python -m venv venv
+
+# Activer le venv
+.\venv\Scripts\Activate.ps1
+
+# Installer les dependances dans le venv
+pip install -r requirements.txt
+```
+
+> **Note :** L'environnement virtuel isole les dependances du projet et evite les conflits avec d'autres applications Python.
+
+### 2.3b Alternative : Installation globale (Sans venv)
 
 ```powershell
 cd C:\zkteco-service
@@ -143,37 +162,45 @@ Sauvegarder et fermer.
 
 ---
 
-## Étape 3 : Tester le service
+## Etape 3 : Tester le service
 
+### Avec venv (Recommande)
+```powershell
+cd C:\zkteco-service
+.\venv\Scripts\Activate.ps1
+python zkteco_service.py
+```
+
+### Sans venv
 ```powershell
 cd C:\zkteco-service
 python zkteco_service.py
 ```
 
-**Résultat attendu :**
+**Resultat attendu :**
 ```
 2026-01-07 10:00:00 - INFO - === Service ZKTeco ===
 2026-01-07 10:00:00 - INFO - OS: Windows
 2026-01-07 10:00:00 - INFO - Appareil: 192.168.1.XXX:4370
 2026-01-07 10:00:00 - INFO - API: https://votre-api.com/api/attendance
 2026-01-07 10:00:00 - INFO - Intervalle: 5 min
-2026-01-07 10:00:00 - INFO - === Début sync ===
+2026-01-07 10:00:00 - INFO - === Debut sync ===
 ```
 
-Arrêter avec `Ctrl+C` si tout fonctionne.
+Arreter avec `Ctrl+C` si tout fonctionne.
 
 ---
 
-## Étape 4 : Créer la tâche planifiée
+## Etape 4 : Creer la tache planifiee
 
-### Option A : Via PowerShell (Recommandé)
+### Option A : Via PowerShell - Avec venv (Recommande)
 
 ```powershell
-# Trouver Python
-$pythonPath = (Get-Command python).Source
-Write-Host "Python: $pythonPath"
+# Utiliser Python du venv
+$pythonPath = "C:\zkteco-service\venv\Scripts\python.exe"
+Write-Host "Python (venv): $pythonPath"
 
-# Créer la tâche
+# Creer la tache
 $action = New-ScheduledTaskAction `
     -Execute $pythonPath `
     -Argument "zkteco_service.py" `
@@ -200,47 +227,100 @@ Register-ScheduledTask `
     -Trigger $trigger `
     -Settings $settings `
     -Principal $principal `
-    -Description "Service de synchronisation ZKTeco - Démarre au boot"
+    -Description "Service de synchronisation ZKTeco - Demarre au boot"
 
-# Démarrer immédiatement
+# Demarrer immediatement
 Start-ScheduledTask -TaskName "ZKTeco_Sync_Service"
 
-Write-Host "✓ Tâche créée et démarrée !"
+Write-Host "Tache creee et demarree !"
+```
+
+### Option A bis : Via PowerShell - Sans venv
+
+```powershell
+# Trouver Python global
+$pythonPath = (Get-Command python).Source
+Write-Host "Python: $pythonPath"
+
+# Creer la tache
+$action = New-ScheduledTaskAction `
+    -Execute $pythonPath `
+    -Argument "zkteco_service.py" `
+    -WorkingDirectory "C:\zkteco-service"
+
+$trigger = New-ScheduledTaskTrigger -AtStartup
+
+$settings = New-ScheduledTaskSettingsSet `
+    -AllowStartIfOnBatteries `
+    -DontStopIfGoingOnBatteries `
+    -StartWhenAvailable `
+    -RestartCount 3 `
+    -RestartInterval (New-TimeSpan -Minutes 1) `
+    -ExecutionTimeLimit (New-TimeSpan -Hours 0)
+
+$principal = New-ScheduledTaskPrincipal `
+    -UserId "SYSTEM" `
+    -LogonType ServiceAccount `
+    -RunLevel Highest
+
+Register-ScheduledTask `
+    -TaskName "ZKTeco_Sync_Service" `
+    -Action $action `
+    -Trigger $trigger `
+    -Settings $settings `
+    -Principal $principal `
+    -Description "Service de synchronisation ZKTeco - Demarre au boot"
+
+# Demarrer immediatement
+Start-ScheduledTask -TaskName "ZKTeco_Sync_Service"
+
+Write-Host "Tache creee et demarree !"
 ```
 
 ### Option B : Via Interface Graphique
 
-1. **Ouvrir le Planificateur de tâches**
+1. **Ouvrir le Planificateur de taches**
    - `Win + R` → taper `taskschd.msc` → OK
 
-2. **Créer une tâche**
-   - Panneau droit → "Créer une tâche..."
+2. **Creer une tache**
+   - Panneau droit → "Creer une tache..."
 
-3. **Onglet Général**
+3. **Onglet General**
    ```
    Nom : ZKTeco_Sync_Service
    Description : Service de synchronisation ZKTeco
 
-   ☑ Exécuter même si l'utilisateur n'est pas connecté
-   ☑ Exécuter avec les autorisations maximales
+   ☑ Executer meme si l'utilisateur n'est pas connecte
+   ☑ Executer avec les autorisations maximales
    ```
 
-4. **Onglet Déclencheurs** → Nouveau
+4. **Onglet Declencheurs** → Nouveau
    ```
-   Commencer la tâche : Au démarrage
-   ☑ Activé
+   Commencer la tache : Au demarrage
+   ☑ Active
    ```
 
 5. **Onglet Actions** → Nouveau
-   ```
-   Action : Démarrer un programme
 
-   Programme/script : [chemin vers python.exe]
+   **Avec venv (Recommande) :**
+   ```
+   Action : Demarrer un programme
+
+   Programme/script : C:\zkteco-service\venv\Scripts\python.exe
    Arguments : zkteco_service.py
-   Démarrer dans : C:\zkteco-service
+   Demarrer dans : C:\zkteco-service
    ```
 
-   **Pour trouver le chemin de Python :**
+   **Sans venv :**
+   ```
+   Action : Demarrer un programme
+
+   Programme/script : [chemin vers python.exe global]
+   Arguments : zkteco_service.py
+   Demarrer dans : C:\zkteco-service
+   ```
+
+   **Pour trouver le chemin de Python global :**
    ```powershell
    (Get-Command python).Source
    ```
@@ -248,19 +328,19 @@ Write-Host "✓ Tâche créée et démarrée !"
 
 6. **Onglet Conditions**
    ```
-   ☐ Ne démarrer que si l'ordinateur est sur secteur (DÉCOCHER)
-   ☐ Arrêter si l'ordinateur passe sur batterie (DÉCOCHER)
+   ☐ Ne demarrer que si l'ordinateur est sur secteur (DECOCHER)
+   ☐ Arreter si l'ordinateur passe sur batterie (DECOCHER)
    ```
 
-7. **Onglet Paramètres**
+7. **Onglet Parametres**
    ```
-   ☑ Autoriser l'exécution à la demande
-   ☑ Si la tâche échoue, redémarrer toutes les : 1 minute
+   ☑ Autoriser l'execution a la demande
+   ☑ Si la tache echoue, redemarrer toutes les : 1 minute
       Nombre de tentatives : 3
-   ☐ Arrêter la tâche si elle s'exécute plus de : (DÉCOCHER ou mettre 0)
+   ☐ Arreter la tache si elle s'execute plus de : (DECOCHER ou mettre 0)
    ```
 
-8. **Valider** avec OK (entrer le mot de passe si demandé)
+8. **Valider** avec OK (entrer le mot de passe si demande)
 
 ---
 
@@ -330,6 +410,13 @@ Clear-Content C:\zkteco-service\zkteco_sync.log
 
 ### Test manuel
 
+**Avec venv :**
+```powershell
+cd C:\zkteco-service
+.\venv\Scripts\python.exe zkteco_service.py
+```
+
+**Sans venv :**
 ```powershell
 cd C:\zkteco-service
 python zkteco_service.py
