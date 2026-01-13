@@ -31,7 +31,7 @@ except ImportError as e:
 
 # Configuration du logging
 def setup_logging():
-    """Configure le système de logging"""
+    """Configure le systeme de logging"""
     log_formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
@@ -40,11 +40,19 @@ def setup_logging():
     file_handler = RotatingFileHandler(
         config.LOG_FILE,
         maxBytes=config.LOG_MAX_BYTES,
-        backupCount=config.LOG_BACKUP_COUNT
+        backupCount=config.LOG_BACKUP_COUNT,
+        encoding='utf-8'
     )
     file_handler.setFormatter(log_formatter)
 
-    console_handler = logging.StreamHandler()
+    # Configuration console avec support UTF-8 sur Windows
+    if platform.system() == 'Windows':
+        import io
+        console_handler = logging.StreamHandler(
+            io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+        )
+    else:
+        console_handler = logging.StreamHandler()
     console_handler.setFormatter(log_formatter)
 
     logger = logging.getLogger()
