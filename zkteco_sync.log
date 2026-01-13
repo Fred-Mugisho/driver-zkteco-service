@@ -11118,3 +11118,501 @@
 2025-10-17 11:00:45,814 - INFO - Nouvelles présences détectées: 1
 2025-10-17 11:00:46,550 - INFO - Synchronisation réussie: 1 présences envoyées
 2025-10-17 11:00:46,579 - INFO - Déconnexion réussie
+2026-01-06 22:04:01,388 - INFO - Démarrage du service ZKTeco avec retry exponentiel et alertes
+2026-01-06 22:04:01,388 - INFO - Démarrage de la synchronisation
+2026-01-06 22:04:02,420 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2026-01-06 22:04:02,420 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 22:04:13,452 - ERROR - Erreur de connexion à l'appareil 192.168.1.100: can't reach device (ping 192.168.1.100)
+2026-01-06 22:04:13,453 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 22:34:46 - root - INFO - === ZKTeco Synchronization Service ===
+2026-01-06 22:34:46 - root - INFO - Environment: production
+2026-01-06 22:34:46 - root - INFO - Configuration: {
+  "environment": "production",
+  "device_ip": "192.168.1.100",
+  "device_port": 4370,
+  "api_url": "https://your-backend.com/api/a...",
+  "sync_interval": 0,
+  "email_notifications": false,
+  "webhook_notifications": false,
+  "healthcheck_enabled": true,
+  "metrics_enabled": true
+}
+2026-01-06 22:34:46 - root - ERROR - Configuration errors:
+2026-01-06 22:34:46 - root - ERROR -   - DEVICE_IP must be configured
+2026-01-06 22:35:10 - root - INFO - === ZKTeco Synchronization Service ===
+2026-01-06 22:35:10 - root - INFO - Environment: development
+2026-01-06 22:35:10 - root - INFO - Configuration: {
+  "environment": "development",
+  "device_ip": "192.168.1.100",
+  "device_port": 4370,
+  "api_url": "https://your-backend.com/api/a...",
+  "sync_interval": 0,
+  "email_notifications": false,
+  "webhook_notifications": false,
+  "healthcheck_enabled": true,
+  "metrics_enabled": true
+}
+2026-01-06 22:35:10 - root - ERROR - Configuration errors:
+2026-01-06 22:35:10 - root - ERROR -   - DEVICE_IP must be configured
+2026-01-06 22:39:13 - root - INFO - === ZKTeco Synchronization Service ===
+2026-01-06 22:39:13 - root - INFO - Environment: development
+2026-01-06 22:39:13 - root - INFO - Configuration: {
+  "environment": "development",
+  "device_ip": "192.168.1.100",
+  "device_port": 4370,
+  "api_url": "http://http://127.0.0.1:8000/a...",
+  "sync_interval": 0,
+  "email_notifications": false,
+  "webhook_notifications": false,
+  "healthcheck_enabled": true,
+  "metrics_enabled": true
+}
+2026-01-06 22:39:13 - root - ERROR - Configuration errors:
+2026-01-06 22:39:13 - root - ERROR -   - DEVICE_IP must be configured
+2026-01-06 22:43:35 - root - INFO - === ZKTeco Synchronization Service ===
+2026-01-06 22:43:35 - root - INFO - Environment: development
+2026-01-06 22:43:35 - root - INFO - Configuration: {
+  "environment": "development",
+  "device_ip": "192.168.1.100",
+  "device_port": 4370,
+  "api_url": "http://http://127.0.0.1:8000/a...",
+  "sync_interval": 0,
+  "email_notifications": true,
+  "webhook_notifications": false,
+  "healthcheck_enabled": true,
+  "metrics_enabled": true
+}
+2026-01-06 22:43:35 - root - ERROR - Configuration errors:
+2026-01-06 22:43:35 - root - ERROR -   - DEVICE_IP must be configured
+2026-01-06 22:47:03 - test - INFO - Test log entry - INFO level
+2026-01-06 22:47:03 - test - WARNING - Test log entry - WARNING level
+2026-01-06 22:47:03 - test - ERROR - Test log entry - ERROR level
+2026-01-06 23:10:12 - INFO - === Service ZKTeco Démarré ===
+2026-01-06 23:10:12 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:10:12 - INFO - API: https://your-backend.com/api/attendance
+2026-01-06 23:10:12 - INFO - Intervalle: 5 minutes
+2026-01-06 23:10:12 - INFO - === Début de synchronisation ===
+2026-01-06 23:10:13 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:13 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:24 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:24 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:35 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:35 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:10:35 - CRITICAL - ✗ Échec après tous les retries
+2026-01-06 23:10:35 - INFO - Scheduler démarré
+2026-01-06 23:11:01 - INFO - Signal 2 reçu, arrêt en cours...
+2026-01-06 23:11:01 - INFO - Service arrêté
+2026-01-06 23:11:04 - INFO - === Service ZKTeco Démarré ===
+2026-01-06 23:11:04 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:11:04 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:11:04 - INFO - Intervalle: 5 minutes
+2026-01-06 23:11:04 - INFO - === Début de synchronisation ===
+2026-01-06 23:11:05 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:11:05 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:11:13 - INFO - Signal 2 reçu, arrêt en cours...
+2026-01-06 23:14:51 - INFO - === Service ZKTeco Démarré ===
+2026-01-06 23:14:51 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:14:51 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:14:51 - INFO - Intervalle: 5 minutes
+2026-01-06 23:14:51 - INFO - === Début de synchronisation ===
+2026-01-06 23:14:52 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:14:52 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:15:03 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:15:03 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:15:14 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:15:14 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:15:14 - CRITICAL - ✗ Échec après tous les retries
+2026-01-06 23:15:14 - INFO - Scheduler démarré
+2026-01-06 23:19:51 - INFO - === Début de synchronisation ===
+2026-01-06 23:19:52 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:19:52 - ERROR - Tentative 1/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:20:03 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:20:03 - ERROR - Tentative 2/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:20:14 - ERROR - Erreur de connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:20:14 - ERROR - Tentative 3/3 échouée: can't reach device (ping 192.168.1.100)
+2026-01-06 23:20:14 - CRITICAL - ✗ Échec après tous les retries
+2026-01-06 23:20:20 - INFO - Signal 2 reçu, arrêt en cours...
+2026-01-06 23:20:20 - INFO - Service arrêté
+2026-01-06 23:31:23 - INFO - === Service ZKTeco ===
+2026-01-06 23:31:23 - INFO - OS: Darwin
+2026-01-06 23:31:23 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:31:23 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:31:23 - INFO - Intervalle: 0 min
+2026-01-06 23:31:23 - INFO - === Début sync ===
+2026-01-06 23:31:24 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:24 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:35 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:35 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:46 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:46 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:31:46 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:32:12 - INFO - === Service ZKTeco ===
+2026-01-06 23:32:12 - INFO - OS: Darwin
+2026-01-06 23:32:12 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:32:12 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:32:12 - INFO - Intervalle: 5 min
+2026-01-06 23:32:12 - INFO - === Début sync ===
+2026-01-06 23:32:13 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:13 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:24 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:24 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:35 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:35 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:32:35 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:33:10 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:33:10 - INFO - Service arrêté
+2026-01-06 23:48:13 - INFO - === Service ZKTeco ===
+2026-01-06 23:48:13 - INFO - === Service ZKTeco ===
+2026-01-06 23:48:13 - INFO - OS: Darwin
+2026-01-06 23:48:13 - INFO - OS: Darwin
+2026-01-06 23:48:13 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:48:13 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:48:13 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:48:13 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:48:13 - INFO - Intervalle: 5 min
+2026-01-06 23:48:13 - INFO - Intervalle: 5 min
+2026-01-06 23:48:13 - INFO - === Début sync ===
+2026-01-06 23:48:13 - INFO - === Début sync ===
+2026-01-06 23:48:14 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:14 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:14 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:14 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:25 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:25 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:25 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:25 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:36 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:36 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:36 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:36 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:48:36 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:48:36 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:48:39 - ERROR - Erreur lors de l'envoi de l'email: 400 Client Error: Bad Request for url: http://email.kwetubest.com/api/send_email/
+2026-01-06 23:48:39 - ERROR - Erreur lors de l'envoi de l'email: 400 Client Error: Bad Request for url: http://email.kwetubest.com/api/send_email/
+2026-01-06 23:49:46 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:49:46 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:49:46 - INFO - Service arrêté
+2026-01-06 23:49:46 - INFO - Service arrêté
+2026-01-06 23:50:11 - INFO - === Service ZKTeco ===
+2026-01-06 23:50:11 - INFO - === Service ZKTeco ===
+2026-01-06 23:50:11 - INFO - OS: Darwin
+2026-01-06 23:50:11 - INFO - OS: Darwin
+2026-01-06 23:50:11 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:50:11 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:50:11 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:50:11 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:50:11 - INFO - Intervalle: 5 min
+2026-01-06 23:50:11 - INFO - Intervalle: 5 min
+2026-01-06 23:50:11 - INFO - === Début sync ===
+2026-01-06 23:50:11 - INFO - === Début sync ===
+2026-01-06 23:50:12 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:12 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:12 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:12 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:23 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:23 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:23 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:23 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:34 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:34 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:34 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:34 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:50:34 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:50:34 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:50:35 - ERROR - Erreur lors de l'envoi de l'email: 400 Client Error: Bad Request for url: http://email.kwetubest.com/api/send_email/
+2026-01-06 23:50:35 - ERROR - Erreur lors de l'envoi de l'email: 400 Client Error: Bad Request for url: http://email.kwetubest.com/api/send_email/
+2026-01-06 23:50:39 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:50:39 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:50:39 - INFO - Service arrêté
+2026-01-06 23:50:39 - INFO - Service arrêté
+2026-01-06 23:51:05 - INFO - === Service ZKTeco ===
+2026-01-06 23:51:05 - INFO - OS: Darwin
+2026-01-06 23:51:05 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:51:05 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:51:05 - INFO - Intervalle: 5 min
+2026-01-06 23:51:05 - INFO - === Début sync ===
+2026-01-06 23:51:06 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:06 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:17 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:17 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:28 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:28 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:51:28 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:51:29 - ERROR - Erreur lors de l'envoi de l'email: 400 Client Error: Bad Request for url: http://email.kwetubest.com/api/send_email/
+2026-01-06 23:52:36 - INFO - Signal 2 - Arrêt...
+2026-01-06 23:52:36 - INFO - Service arrêté
+2026-01-06 23:58:28 - INFO - === Service ZKTeco ===
+2026-01-06 23:58:28 - INFO - OS: Darwin
+2026-01-06 23:58:28 - INFO - Appareil: 192.168.1.100:4370
+2026-01-06 23:58:28 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-06 23:58:28 - INFO - Intervalle: 5 min
+2026-01-06 23:58:28 - INFO - === Début sync ===
+2026-01-06 23:58:29 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:29 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:40 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:40 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:51 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:51 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-06 23:58:51 - CRITICAL - ✗ Échec après retries
+2026-01-06 23:58:52 - INFO - Email envoyé avec succès à 1 destinataire(s)
+2026-01-07 00:00:03 - INFO - Signal 2 - Arrêt...
+2026-01-07 00:00:03 - INFO - Service arrêté
+2026-01-07 05:25:51 - INFO - === Service ZKTeco ===
+2026-01-07 05:25:51 - INFO - OS: Darwin
+2026-01-07 05:25:51 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:25:51 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:25:51 - INFO - Intervalle: 5 min
+2026-01-07 05:25:51 - INFO - === Début sync ===
+2026-01-07 05:25:52 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:25:52 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:26:03 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:26:03 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:26:14 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:26:14 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:26:14 - CRITICAL - ✗ Échec après retries
+2026-01-07 05:26:14 - ERROR - Erreur réseau lors de l'envoi de l'email: HTTPConnectionPool(host='http', port=80): Max retries exceeded with url: /127.0.0.1:8001/api/send_email/ (Caused by NameResolutionError("HTTPConnection(host='http', port=80): Failed to resolve 'http' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-01-07 05:26:39 - INFO - Signal 2 - Arrêt...
+2026-01-07 05:26:39 - INFO - Service arrêté
+2026-01-07 05:27:41 - INFO - === Service ZKTeco ===
+2026-01-07 05:27:41 - INFO - OS: Darwin
+2026-01-07 05:27:41 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:27:41 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:27:41 - INFO - Intervalle: 5 min
+2026-01-07 05:27:41 - INFO - === Début sync ===
+2026-01-07 05:27:42 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:27:42 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:27:53 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:27:53 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:28:04 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:28:04 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:28:04 - CRITICAL - ✗ Échec après retries
+2026-01-07 05:28:09 - INFO - Email envoyé avec succès à 1 destinataire(s)
+2026-01-07 05:29:09 - INFO - Signal 2 - Arrêt...
+2026-01-07 05:29:09 - INFO - Service arrêté
+2026-01-07 05:42:52 - INFO - === Service ZKTeco ===
+2026-01-07 05:42:52 - INFO - OS: Darwin
+2026-01-07 05:42:52 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:42:52 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:42:52 - INFO - Intervalle: 5 min
+2026-01-07 05:42:52 - INFO - === Début sync ===
+2026-01-07 05:42:53 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:42:53 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:43:04 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:43:04 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:43:15 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:43:15 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:43:15 - CRITICAL - ✗ Échec après retries
+2026-01-07 05:43:20 - INFO - Email envoyé avec succès à 1 destinataire(s)
+2026-01-07 05:47:33 - INFO - Signal 2 - Arrêt...
+2026-01-07 05:47:33 - INFO - Service arrêté
+2026-01-07 05:48:40 - INFO - === Service ZKTeco ===
+2026-01-07 05:48:40 - INFO - OS: Darwin
+2026-01-07 05:48:40 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:48:40 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:48:40 - INFO - Intervalle: 5 min
+2026-01-07 05:48:40 - INFO - === Début sync ===
+2026-01-07 05:48:41 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:48:41 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:48:52 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:48:52 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:49:03 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:49:03 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:49:03 - CRITICAL - ✗ Échec après retries
+2026-01-07 05:49:07 - INFO - Email envoyé avec succès à 1 destinataire(s)
+2026-01-07 05:52:48 - INFO - Signal 2 - Arrêt...
+2026-01-07 05:52:48 - INFO - Service arrêté
+2026-01-07 05:52:50 - INFO - === Service ZKTeco ===
+2026-01-07 05:52:50 - INFO - OS: Darwin
+2026-01-07 05:52:50 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:52:50 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:52:50 - INFO - Intervalle: 5 min
+2026-01-07 05:52:50 - INFO - === Début sync ===
+2026-01-07 05:52:51 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:52:51 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:53:02 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:53:02 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:53:13 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:53:13 - ERROR - Tentative 3/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:53:13 - CRITICAL - ✗ Échec après retries
+2026-01-07 05:53:18 - INFO - Email envoyé avec succès à 1 destinataire(s)
+2026-01-07 05:56:27 - INFO - Signal 2 - Arrêt...
+2026-01-07 05:56:27 - INFO - Service arrêté
+2026-01-07 05:59:47 - INFO - === Service ZKTeco ===
+2026-01-07 05:59:47 - INFO - OS: Darwin
+2026-01-07 05:59:47 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 05:59:47 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 05:59:47 - INFO - Intervalle: 5 min
+2026-01-07 05:59:47 - INFO - === Début sync ===
+2026-01-07 05:59:48 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:59:48 - ERROR - Tentative 1/3: can't reach device (ping 192.168.1.100)
+2026-01-07 05:59:59 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 05:59:59 - ERROR - Tentative 2/3: can't reach device (ping 192.168.1.100)
+2026-01-07 06:00:09 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:01:14 - INFO - === Service ZKTeco ===
+2026-01-07 06:01:14 - INFO - OS: Darwin
+2026-01-07 06:01:14 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:01:14 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:01:14 - INFO - Intervalle: 5 min
+2026-01-07 06:01:14 - INFO - === Début sync ===
+2026-01-07 06:01:14 - ERROR - Tentative 1/3: 'ZKAttendanceAgent' object does not support the context manager protocol
+2026-01-07 06:01:20 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:02:08 - INFO - === Service ZKTeco ===
+2026-01-07 06:02:08 - INFO - OS: Darwin
+2026-01-07 06:02:08 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:02:08 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:02:08 - INFO - Intervalle: 5 min
+2026-01-07 06:02:08 - INFO - === Début sync ===
+2026-01-07 06:02:09 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:02:09 - INFO - 2 présences détectées
+2026-01-07 06:02:09 - WARNING - Erreur API 400
+2026-01-07 06:02:09 - ERROR - Tentative 1/3: API 400
+2026-01-07 06:02:21 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:02:21 - INFO - 2 présences détectées
+2026-01-07 06:02:21 - WARNING - Erreur API 400
+2026-01-07 06:02:21 - ERROR - Tentative 2/3: API 400
+2026-01-07 06:02:23 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:04:13 - INFO - === Service ZKTeco ===
+2026-01-07 06:04:13 - INFO - OS: Darwin
+2026-01-07 06:04:13 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:04:13 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:04:13 - INFO - Intervalle: 5 min
+2026-01-07 06:04:13 - INFO - === Début sync ===
+2026-01-07 06:04:14 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:04:14 - INFO - 2 présences détectées
+2026-01-07 06:04:15 - WARNING - Erreur API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .994902"}
+2026-01-07 06:04:15 - ERROR - Tentative 1/3: API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .994902"}
+2026-01-07 06:04:24 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:04:49 - INFO - === Service ZKTeco ===
+2026-01-07 06:04:49 - INFO - OS: Darwin
+2026-01-07 06:04:49 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:04:49 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:04:49 - INFO - Intervalle: 5 min
+2026-01-07 06:04:49 - INFO - === Début sync ===
+2026-01-07 06:04:50 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:04:50 - INFO - 2 présences détectées
+2026-01-07 06:04:50 - WARNING - Erreur API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .162342"}
+2026-01-07 06:04:50 - ERROR - Tentative 1/3: API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .162342"}
+2026-01-07 06:04:53 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:07:42 - INFO - === Service ZKTeco ===
+2026-01-07 06:07:42 - INFO - OS: Darwin
+2026-01-07 06:07:42 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:07:42 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:07:42 - INFO - Intervalle: 5 min
+2026-01-07 06:07:42 - INFO - === Début sync ===
+2026-01-07 06:07:43 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:07:43 - INFO - 3 présences détectées
+2026-01-07 06:07:43 - ERROR - Tentative 1/3: Object of type datetime is not JSON serializable
+2026-01-07 06:07:51 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:08:57 - INFO - === Service ZKTeco ===
+2026-01-07 06:08:57 - INFO - OS: Darwin
+2026-01-07 06:08:57 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:08:57 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:08:57 - INFO - Intervalle: 5 min
+2026-01-07 06:08:57 - INFO - === Début sync ===
+2026-01-07 06:08:58 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:08:58 - INFO - 3 présences détectées
+2026-01-07 06:08:58 - WARNING - Erreur API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .819397"}
+2026-01-07 06:08:58 - ERROR - Tentative 1/3: API 400 : {"message":"Une erreur est survenue, veuillez contacter l'IT du système","error":"unconverted data remains: .819397"}
+2026-01-07 06:09:02 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:11:13 - INFO - === Service ZKTeco ===
+2026-01-07 06:11:13 - INFO - OS: Darwin
+2026-01-07 06:11:13 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:11:13 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:11:13 - INFO - Intervalle: 5 min
+2026-01-07 06:11:13 - INFO - === Début sync ===
+2026-01-07 06:11:14 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:11:14 - INFO - 3 présences détectées
+2026-01-07 06:11:14 - INFO - ✓ Sync réussie: 3 présences
+2026-01-07 06:11:27 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:11:27 - INFO - Service arrêté
+2026-01-07 06:13:34 - INFO - === Service ZKTeco ===
+2026-01-07 06:13:34 - INFO - OS: Darwin
+2026-01-07 06:13:34 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 06:13:34 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 06:13:34 - INFO - Intervalle: 5 min
+2026-01-07 06:13:34 - INFO - === Début sync ===
+2026-01-07 06:13:35 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 06:13:35 - INFO - 3 présences détectées
+2026-01-07 06:13:35 - INFO - ✓ Sync réussie: 3 présences
+2026-01-07 06:13:44 - INFO - Signal 2 - Arrêt...
+2026-01-07 06:13:44 - INFO - Service arrêté
+2026-01-07 11:05:39 - INFO - === Service ZKTeco ===
+2026-01-07 11:05:39 - INFO - OS: Darwin
+2026-01-07 11:05:39 - INFO - Appareil: 192.168.1.100:4370
+2026-01-07 11:05:39 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 11:05:39 - INFO - Intervalle: 5 min
+2026-01-07 11:05:39 - INFO - === Début sync ===
+2026-01-07 11:05:40 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 11:05:40 - INFO - 3 présences détectées
+2026-01-07 11:05:40 - ERROR - Tentative 1/3: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/administration/receive_attendance/ (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-01-07 11:05:51 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.100)
+2026-01-07 11:05:51 - INFO - 3 présences détectées
+2026-01-07 11:05:51 - ERROR - Tentative 2/3: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/administration/receive_attendance/ (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-01-07 11:05:54 - INFO - Signal 2 - Arrêt...
+2026-01-07 11:35:03 - INFO - === Service ZKTeco ===
+2026-01-07 11:35:03 - INFO - OS: Darwin
+2026-01-07 11:35:03 - INFO - Appareil: 192.168.1.201:4370
+2026-01-07 11:35:03 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 11:35:03 - INFO - Intervalle: 5 min
+2026-01-07 11:35:03 - INFO - === Début sync ===
+2026-01-07 11:35:04 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-07 11:35:04 - ERROR - Tentative 1/3: Non connecté
+2026-01-07 11:35:15 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-07 11:35:15 - ERROR - Tentative 2/3: Non connecté
+2026-01-07 11:35:26 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-07 11:35:26 - ERROR - Tentative 3/3: Non connecté
+2026-01-07 11:35:26 - CRITICAL - ✗ Échec après retries
+2026-01-07 11:35:26 - ERROR - Erreur réseau lors de l'envoi de l'email: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /api/send_email/ (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-01-07 11:35:38 - INFO - Signal 2 - Arrêt...
+2026-01-07 11:35:38 - INFO - Service arrêté
+2026-01-07 11:41:17 - INFO - === Service ZKTeco ===
+2026-01-07 11:41:17 - INFO - OS: Darwin
+2026-01-07 11:41:17 - INFO - Appareil: 192.168.1.144:4370
+2026-01-07 11:41:17 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 11:41:17 - INFO - Intervalle: 5 min
+2026-01-07 11:41:17 - INFO - === Début sync ===
+2026-01-07 11:41:18 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.144)
+2026-01-07 11:41:18 - ERROR - Tentative 1/3: Non connecté
+2026-01-07 11:41:22 - INFO - Signal 2 - Arrêt...
+2026-01-07 11:41:29 - INFO - === Service ZKTeco ===
+2026-01-07 11:41:29 - INFO - OS: Darwin
+2026-01-07 11:41:29 - INFO - Appareil: 192.168.1.201:4370
+2026-01-07 11:41:29 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 11:41:29 - INFO - Intervalle: 5 min
+2026-01-07 11:41:29 - INFO - === Début sync ===
+2026-01-07 11:41:29 - INFO - Connecté à 192.168.1.201
+2026-01-07 11:41:29 - INFO - 0 présences détectées
+2026-01-07 11:41:29 - INFO - Aucune nouvelle présence
+2026-01-07 11:41:36 - INFO - Signal 2 - Arrêt...
+2026-01-07 11:41:36 - INFO - Service arrêté
+2026-01-07 11:43:41 - INFO - === Service ZKTeco ===
+2026-01-07 11:43:41 - INFO - OS: Darwin
+2026-01-07 11:43:41 - INFO - Appareil: 192.168.1.201:4370
+2026-01-07 11:43:41 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-07 11:43:41 - INFO - Intervalle: 5 min
+2026-01-07 11:43:41 - INFO - === Début sync ===
+2026-01-07 11:43:41 - INFO - Connecté à 192.168.1.201
+2026-01-07 11:43:41 - INFO - 2 présences détectées
+2026-01-07 11:43:41 - ERROR - Tentative 1/3: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/administration/receive_attendance/ (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-01-07 11:43:52 - INFO - Connecté à 192.168.1.201
+2026-01-07 11:43:52 - INFO - 2 présences détectées
+2026-01-07 11:43:52 - ERROR - Tentative 2/3: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/administration/receive_attendance/ (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-01-07 11:43:52 - INFO - Signal 2 - Arrêt...
+2026-01-13 10:55:48 - INFO - === Service ZKTeco ===
+2026-01-13 10:55:48 - INFO - OS: Darwin
+2026-01-13 10:55:48 - INFO - Appareil: 192.168.1.201:4370
+2026-01-13 10:55:48 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-13 10:55:48 - INFO - Intervalle: 5 min
+2026-01-13 10:55:48 - INFO - === Début sync ===
+2026-01-13 10:55:49 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-13 10:55:49 - ERROR - Tentative 1/3: Non connecté
+2026-01-13 10:55:56 - INFO - Signal 2 - Arrêt...
+2026-01-13 10:56:24 - INFO - === Service ZKTeco ===
+2026-01-13 10:56:24 - INFO - OS: Darwin
+2026-01-13 10:56:24 - INFO - Appareil: 192.168.1.201:4370
+2026-01-13 10:56:24 - INFO - API: http://127.0.0.1:8000/api/administration/receive_attendance/
+2026-01-13 10:56:24 - INFO - Intervalle: 5 min
+2026-01-13 10:56:24 - INFO - === Début sync ===
+2026-01-13 10:56:25 - ERROR - Erreur connexion: can't reach device (ping 192.168.1.201)
+2026-01-13 10:56:25 - ERROR - Tentative 1/3: Non connecté
+2026-01-13 10:56:29 - INFO - Signal 2 - Arrêt...
